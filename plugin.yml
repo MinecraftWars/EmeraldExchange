@@ -1,0 +1,8 @@
+name: Emerald Exchange
+main: uk.co.exec64.EmeraldExchange.EmeraldExchange
+version: 1.0
+depend: [Vault]
+commands:
+   ee:
+      description: Emerald Exchange
+      usage: /ee <command> <args>
