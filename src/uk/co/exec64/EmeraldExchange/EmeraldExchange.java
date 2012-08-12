@@ -676,13 +676,13 @@ public class EmeraldExchange extends JavaPlugin {
 		}
 		
 		List<EEItemStack> stacks = getDeliveries(player.getName());
+		double revenue = getRevenue(player.getName());
 		
-		if(stacks.size() == 0 ) {
+		if(stacks.size() == 0  && revenue == 0 ) {
 			sender.sendMessage(Conf.colorMain + "You have no deliveries waiting.");
 			return;
 		}
 		
-		double revenue = getRevenue(player.getName());
 		double tax = revenue * Conf.tax;
 		revenue -= tax;
 		
