@@ -737,10 +737,7 @@ public class EmeraldExchange extends JavaPlugin {
 	
 	public void cmdTop(CommandSender sender, String[] args) {
 		//Iterate over each market, get total bids/offers
-		for( Market market : markets ) {
-			int total = 0;
-			//total += market.getOffers().size
-		}
+		
 		
 		//Sort totals
 		
