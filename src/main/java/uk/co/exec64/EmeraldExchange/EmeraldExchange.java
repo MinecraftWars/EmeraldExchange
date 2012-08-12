@@ -246,6 +246,9 @@ public class EmeraldExchange extends JavaPlugin {
 					if(args[0].equalsIgnoreCase("help"))
 						cmdHelp(sender, args);
 					
+					else if(args[0].equalsIgnoreCase("top"))
+						cmdTop(sender, args);
+					
 					else if(args[0].equalsIgnoreCase("offers"))
 						cmdOffers(sender, args);
 					
@@ -730,6 +733,18 @@ public class EmeraldExchange extends JavaPlugin {
 		
 		getLogger().info("Items delivered to " + player.getDisplayName());
 		
+	}
+	
+	public void cmdTop(CommandSender sender, String[] args) {
+		//Iterate over each market, get total bids/offers
+		for( Market market : markets ) {
+			int total = 0;
+			//total += market.getOffers().size
+		}
+		
+		//Sort totals
+		
+		//Print top 10
 	}
 	
 	
