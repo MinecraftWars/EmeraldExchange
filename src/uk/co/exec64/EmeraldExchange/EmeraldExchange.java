@@ -73,6 +73,22 @@ public class EmeraldExchange extends JavaPlugin {
             return;
         }
 		
+		//Now enable event listener
+		new EEEventListener(this);
+		
+		//Now schedule a collection notification every 5 minutes
+		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+			public void run() {
+				//Notify all players.
+				Player[] players = getServer().getOnlinePlayers();
+				
+				for(Player player : players) {
+					notifyPlayer(player.getName());
+				}
+			}
+		}, 5 * 60 * 20L, 5 * 60 * 20L);
+		//The above line is initial delay of 5 minutes, repeating every 5 minutes
+		
 		getLogger().info("EmeraldExchange Enabled.");
 	}
 	

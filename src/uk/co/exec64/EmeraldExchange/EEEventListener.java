@@ -4,11 +4,12 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
-public class EventListener implements Listener {
+public class EEEventListener implements Listener {
 	
 	private EmeraldExchange plugin;
 	
-	EventListener(EmeraldExchange plugin) {
+	EEEventListener(EmeraldExchange plugin) {
+		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 		this.plugin = plugin;
 	}
 	
