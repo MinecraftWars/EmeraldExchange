@@ -1,4 +1,4 @@
-name: Emerald Exchange
+name: EmeraldExchange
 main: uk.co.exec64.EmeraldExchange.EmeraldExchange
 version: 1.0
 depend: [Vault]
